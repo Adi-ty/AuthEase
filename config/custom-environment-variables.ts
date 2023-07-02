@@ -6,4 +6,5 @@ export default {
   googleClientId: "GOOGLE_CLIENT_ID",
   googleClientSecret: "GOOGLE_CLIENT_SECRET",
   googleOauthRedirectUrl: "GOOGLE_OAUTH_REDIRECT_URL",
+  dbUri: "DB_URI",
 };

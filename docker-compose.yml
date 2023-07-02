@@ -1,0 +1,12 @@
+version: '3.7'
+services: 
+  auth-api: 
+    container_name: auth-api
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    build:
+      context: ./
+    ports: 
+      - 3000:3000
+    
