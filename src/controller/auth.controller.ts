@@ -1,20 +1,13 @@
 import { Request, Response } from "express";
 import { CreateSessionInput } from "../schema/auth.schema";
-import {
-  findUserByEmail,
-  findUserById,
-  // getGoogleUser
-} from "../service/user.service";
+import { findUserByEmail, findUserById } from "../service/user.service";
 import {
   findSessionById,
-  // getGoogleOauthTokens,
   signAccessToken,
   signRefreshToken,
 } from "../service/auth.service";
 import { get } from "lodash";
 import { verifyJwt } from "../utils/jwt";
-import config from "config";
-import jwt from "jsonwebtoken";
 
 export async function createSessionHandler(
   req: Request<{}, {}, CreateSessionInput>,
@@ -82,30 +75,3 @@ export async function refreshAcessTokenHandler(req: Request, res: Response) {
 
   return res.send({ accessToken });
 }
-
-// export async function googleOauthHandler(req: Request, res: Response) {
-//   // get the code from qs
-//   const code = req.query.code as string;
-
-//   try {
-//     // get id token and access token with code
-//     const { id_token, access_token } = await getGoogleOauthTokens({ code });
-
-//     // get the user with token
-//     const googleUser = await getGoogleUser({ id_token, access_token });
-//     // jwt.decode(id_token);
-
-//     // upsert the user
-
-//     // create the session
-
-//     // create access token and refresh token
-
-//     // set cookies
-
-//     // redirect back to client
-//   } catch (err) {
-//     console.error(err, "Failed to authenticate with google");
-//     return res.redirect(`${config.get("origin")}/oauth/error`);
-//   }
-// }

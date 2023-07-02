@@ -17,6 +17,4 @@ router.post(
 
 router.post("/api/sessions/refresh", refreshAcessTokenHandler);
 
-// router.get("/api/sessions/oauth/google", googleOauthHandler);
-
 export default router;
