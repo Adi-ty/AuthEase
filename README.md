@@ -1,7 +1,4 @@
-<div align="center">
-    <h1>AuthEase</h1>
-    <img src="./images/authease.svg" alt="AuthEase Logo" width="200" height="200" />
-</div>
+# <img src="./images/authease.svg" alt="AuthEase Logo" width="35" height="35"> AuthEase 
 
 AuthEase is a complete solution for secure user management in your Node.js application. It provides session management to ensure that your user's data is kept safe and secure. AuthEase is built using TypeScript, Node.js, Express, MongoDB, Typegoose, and Zod.
 
